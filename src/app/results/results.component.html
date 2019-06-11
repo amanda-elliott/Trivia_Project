@@ -1,0 +1,38 @@
+<section *ngIf="!isShowing" class="userScore">
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+  <h1>CONGRATULATIONS!</h1>
+  <p>You got {{ score }} out of 10 correct!</p>
+  <button (click)="toggleShow()">See Correct Answers</button>
+</section>
+
+ <section class="correctAnswers"> 
+  <h1>CORRECT ANSWERS</h1>
+  <div class="answerBox">
+    <div *ngFor="let question of questions; index as i">
+      <div class="answer">
+        <p>Q{{ i+1 }}: {{ question.question_name }}</p>
+        <p>Answer: {{ question.answer }}</p>
+      </div>
+    </div>
+  </div>
+  <button [routerLink]="['/scores']">See Top Scores</button>
+</section> 
+
+<!-- not showing same questions as ones asked -->

@@ -1,0 +1,18 @@
+<section *ngIf="!isShowing" class="userScore">
+    <h1>YOUR SCORE</h1>
+    <p>{{score}} / 10</p>
+    <button (click)="toggleShow()">OK</button>
+  </section>
+  
+<section class="topScores">
+  <h1>"You are literally the best" <span> - Chris Traeger</span></h1>
+  <div class="scoreBox">
+    <div *ngFor="let score of scores; index as i">
+      <div class="score">
+        <p>Username: {{ score.username }}</p>
+        <p>Score: {{ score.scores }} / 10</p>
+      </div>
+    </div>
+  </div>
+  <button [routerLink]="['/quiz']">Play Again</button>
+</section>
