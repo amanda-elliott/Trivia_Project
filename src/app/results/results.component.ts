@@ -15,11 +15,7 @@ export class ResultsComponent implements OnInit {
   constructor(private quizService: QuizService) { }
 
   ngOnInit() {
-    // this.quizService.getQuestions().subscribe(response => {
-    //   this.questions = response;
-    // });
     this.questions = this.quizService.questions;
-
     this.score = this.quizService.score;
   }
 
