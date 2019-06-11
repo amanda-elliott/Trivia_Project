@@ -22,6 +22,10 @@ export class QuizService {
     return this.http.get("/api/scores", { responseType: "json" });
   }
 
+  setQuestions(questionList) {
+    this.questions = questionList;
+  }
+
   addScores(newScore) {
     return this.http.post("/api/scores", newScore, { responseType: "json" });
   }
