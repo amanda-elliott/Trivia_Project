@@ -557,7 +557,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Amanda\documents\grand_circus\projects\trivia\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! C:\Users\Amanda\Documents\Grand_Circus\Projects\trivia\src\styles.css */"./src/styles.css");
 
 
 /***/ })
