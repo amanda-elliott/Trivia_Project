@@ -34,17 +34,10 @@ export class QuizService {
   calculateScore(form, questions) {
     let userAnswers = Object.values(form.value);
     userAnswers.splice(0, 1);
-    console.log(userAnswers);
     for (let i = 0; i < userAnswers.length; i++) {
       if (userAnswers[i] === questions[i].answer) {
         this.score++;
-        console.log("right");
-        console.log(questions[i].answer);
-      } else {
-        console.log("wrong");
-        console.log(questions[i].answer);
-      }
-      console.log(this.score);
+      } 
     }
     this.router.navigate(['/results']);
     this.addScores({ username: form.value.username, scores: this.score }).subscribe(response => {

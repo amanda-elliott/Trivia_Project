@@ -18,6 +18,7 @@ export class QuizComponent implements OnInit {
       this.questions = response;
       this.quizService.setQuestions(response);
     });
+    this.quizService.score = null;
   }
 
   submitAnswers(form) {
